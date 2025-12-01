@@ -82,8 +82,12 @@ async function renderBook(index, pushToHistory = true) {
         coverEl.style.display = 'block';
     }
 
-    // Static Explanation Message
-    descEl.textContent = "AI explanations are not available in this static version.";
+    // Display Explanation
+    if (book.explanation) {
+        descEl.textContent = book.explanation;
+    } else {
+        descEl.textContent = "Explanation not available.";
+    }
 
     // Prepare Next Random Book
     nextRandomIndex = getRandomIndex();
