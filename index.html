@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&family=Jua&family=Do+Hyeon&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="comic-container">
+        <div class="sidebar">
+            <button id="up-btn" class="comic-btn" aria-label="Previous Book">
+                <span class="arrow">▲</span>
+                <span class="pow">POW!</span>
+            </button>
+            <div class="decoration-dots"></div>
+            <button id="down-btn" class="comic-btn" aria-label="Next Book">
+                <span class="arrow">▼</span>
+                <span class="bam">BAM!</span>
+            </button>
+        </div>
+        <main class="content-panel">
+            <div class="panel-header">
+                <div class="issue-number">ISSUE #<span id="issue-num">1</span></div>
+                <div class="date-stamp">MARVEL</div>
+            </div>
+            <article id="article-display">
+                <div class="book-info">
+                    <div class="image-container">
+                        <img id="book-cover" src="" alt="Book Cover" style="display: none;">
+                        <div id="loading-spinner">LOADING...</div>
+                    </div>
+                    <h1 id="book-title"></h1>
+                </div>
+                <div class="article-body" id="book-description">
+                    Loading story...
+                </div>
+            </article>
+            <div class="panel-footer">
+                <span class="page-number">Pg. <span id="page-num">1</span></span>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
